@@ -38,8 +38,8 @@ class movieData {
     
                 <div class="movie-wrapper">
                     <div class="movie-items clearfix">
-                        <div id="video-trigger" class="img"
-                            style="background-image:url(https://image.tmdb.org/t/p/original/${movieResponse.backdrop_path})">
+                        <div id="show-popup" class="img"
+                            style="background-image:url(https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movieResponse.poster_path})">
                         </div>
                         <div class="movie-info">
                             <h3><a href="movie.html#${movieResponse.id}" class="title">${movieResponse.title}</a></h3>
@@ -55,10 +55,10 @@ class movieData {
     
     <div id="videopopup" class="video-popup">
         <div class="video-popup-container">
-            <button id="closepopup" class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <button id="close-popup" class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
             <div class="video-frame">
-                <iframe width="100%" height="100%"
-                    src="https://www.youtube.com/embed/${movieResponse.videos.results[0].key}">
+                <iframe class="youtube-video" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/${movieResponse.videos.results[0].key}" allowscriptaccess="always">
                 </iframe>
             </div>
         </div>

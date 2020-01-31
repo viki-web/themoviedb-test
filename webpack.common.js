@@ -12,7 +12,7 @@ module.exports = {
   mode: 'development',
   entry: {
     main: ['babel-polyfill','./src/index.js'],
-    vendor: ['babel-polyfill', './src/moviedetail.js']
+    vendor: ['babel-polyfill', './src/moviedetail.js'],
   },
   module: {
     rules: [{

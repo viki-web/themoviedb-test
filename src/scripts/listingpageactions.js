@@ -1,13 +1,15 @@
 
 newlistingdatacontroller.movieDetail();
 
-window.onscroll = function (ev) {
-    if ((window.innerHeight + Math.ceil(window.pageYOffset + 1)) >= document.body.offsetHeight) {
-      httpconstants.page++;
 
-      console.log((window.innerHeight + window.pageYOffset) , document.body.offsetHeight - 2)
-      console.log(httpconstants.page);
-      newlistingdatacontroller.movieDetail();
+window.onscroll = function(ev) {
+
+    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight -2) {
+        httpconstants.page++;
+
+        console.log((window.innerHeight + window.pageYOffset) , document.body.offsetHeight - 2)
+        console.log(httpconstants.page);
+        newlistingdatacontroller.movieDetail();
     }
 };
 

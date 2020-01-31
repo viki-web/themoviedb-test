@@ -1,5 +1,3 @@
-// user.js
-
 
 class listingdatacontroller {
     movieDetail = function () {
@@ -10,7 +8,7 @@ class listingdatacontroller {
             url = httpconstants.apiurl + '/movie/top_rated?api_key=' + httpconstants.apikey + '&language=en-US&page=' + httpconstants.page;
         } else if (httpconstants.hash) {
             //url = httpconstants.apiurl +'/movie/top_rated?api_key='+ httpconstants.apikey +'&language=en-US&page='+ httpconstants.page;
-            url = 'https://api.themoviedb.org/3/movie/530915?api_key=e870bf92a3befaf1589d3bc282f03616&append_to_response=videos';
+            url = httpconstants.apiurl + '/movie/'+httpconstants.hash+'?api_key='+ httpconstants.apikey +'&append_to_response=videos';
         } else {
             url = httpconstants.apiurl + '/search/movie?api_key=' + httpconstants.apikey + '&language=en-US&query=' + httpconstants.searchval + '&page=1&include_adult=false';
         }
