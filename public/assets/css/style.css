@@ -657,9 +657,9 @@ body::-webkit-scrollbar-thumb {
   .header__actions {
     width: 383px;
   }
-  .header__content {
+  /* .header__content {
     padding: 0 30px;
-  }
+  } */
 }
 /*==============================
 	Home
@@ -5513,4 +5513,32 @@ body::-webkit-scrollbar-thumb {
 }
 .plyr--video .plyr__control svg {
   filter: none;
+}
+
+.slick-prev,
+.slick-next {
+  background: #ffffff2b;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+.slick-prev:before{
+  content: "\f060";
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.slick-next:before, [dir=rtl] .slick-prev:before{
+  content: "\f061";
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-next {
+  right: -35px;
 }

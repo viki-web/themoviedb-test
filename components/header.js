@@ -27,7 +27,7 @@ const closeNav = () => {
 							<span></span>
 						</button>
 						<a onClick={()=>{Router.push("/")}} className="header__logo">
-							<img src="img/logo.svg"/>
+							<img src="../assets/images/logo.svg"/>
 						</a>
 						<ul className="header__nav">
 							<li className="header__nav-item">
