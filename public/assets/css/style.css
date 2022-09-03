@@ -5542,3 +5542,7 @@ body::-webkit-scrollbar-thumb {
 .slick-next {
   right: -35px;
 }
+
+.col-five{
+  width: 20%;
+}

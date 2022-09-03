@@ -28,15 +28,17 @@ const MoviesListingInfinite = ({genere}) => {
     },[]);
 
     return(<>
-    <div className="clearfix">
+    <div className="clearfix container">
         {loading?(
             <div>loading</div>
         ):(<>
-            <InfiniteScroll pageStart={1} loadMore={fetchMovies} hasMore={true || false} loader={<div className="loader" key={0}>Loading ...</div>} >
+            <InfiniteScroll className="row" pageStart={1} loadMore={fetchMovies} hasMore={true || false} loader={<div className="loader" key={0}>Loading ...</div>} >
                 {movies.map((movie, index)=>{
-                    return(
-                        <Item data={movie} index={index} type={1}/>
-                    )
+                    return(<>
+                        <div className="col-five infinite-col">
+                            <Item data={movie} index={index} type={1}/>
+                        </div>
+                    </>)
                 })}
             </InfiniteScroll>
         </>)}
