@@ -1846,8 +1846,15 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid #fff;
   border-radius: 50%;
   font-size: 26px;
-  padding: 13px 19px;
 }
+
+.card__cover .icon::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 
 .card__cover .xl-icon {
   position: absolute;
@@ -1861,7 +1868,13 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #fff;
   border-radius: 50%;
   font-size: 3rem;
-  padding: 22px 29px;
+}
+
+.card__cover .xl-icon::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .card__cover:before {
@@ -5545,4 +5558,11 @@ body::-webkit-scrollbar-thumb {
 
 .col-five{
   width: 20%;
+}
+
+.slick-next:focus, 
+.slick-next:hover, 
+.slick-prev:focus, 
+.slick-prev:hover{
+  background: #0b5bc7bf;
 }
