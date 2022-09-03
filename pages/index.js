@@ -7,9 +7,9 @@ function HomePage() {
     return (<>
       <div className="section">
         <div className="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="section__title">Now Playing</h2>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="section__title">Now Playing</h2>
             </div>
           </div>
           <MoviesListing page={page}/>
@@ -18,9 +18,9 @@ function HomePage() {
 
       <div className="section section--pb0">
         <div className="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="section__title">Top Thriller</h2>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="section__title">Top Thriller</h2>
             </div>
           </div>
           <MoviesListing genere={878}/>
@@ -29,9 +29,9 @@ function HomePage() {
 
       <div className="section section--pb0">
         <div className="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="section__title">Top Sci-Fi</h2>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="section__title">Top Sci-Fi</h2>
             </div>
           </div>
           <MoviesListing genere={99} page={page}/>
@@ -40,9 +40,9 @@ function HomePage() {
 
       <div className="section section--pb0">
         <div className="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="section__title">Top Kids</h2>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="section__title">Top Kids</h2>
             </div>
           </div>
           <MoviesListing genere={16} page={page}/>
@@ -51,9 +51,9 @@ function HomePage() {
 
       <div className="section section--pb0">
         <div className="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="section__title">Top Horror</h2>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="section__title">Top Horror</h2>
             </div>
           </div>
           <MoviesListing genere={53} page={page}/>
@@ -62,9 +62,9 @@ function HomePage() {
 
       <div className="section section--pb0">
         <div className="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="section__title">Now playing</h2>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="section__title">Now playing</h2>
             </div>
           </div>
           <MoviesListing genere={27} page={page}/>

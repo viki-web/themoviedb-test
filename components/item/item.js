@@ -12,8 +12,8 @@ const Item = ({data, index, type}) => {
                         return (<>
                             <div className="">
                                 <a href={"/movie/"+data.id} className="card__cover">
-                                    <span className="card__rating"><i class="fa-solid fa-star mr-1"></i> 7.2</span>
-                                    <i class="fa-solid fa-play icon"></i>
+                                    <span className="card__rating"><i className="fa-solid fa-star mr-1"></i> 7.2</span>
+                                    <i className="fa-solid fa-play icon"></i>
                                     <img src={poster_path}/>
                                 </a>
                             </div>
