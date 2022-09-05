@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import MovieDBService from "../../services/movie-db";
 import Item from "../../components/item/item";
 import Slider from "react-slick";
+import VideoFrame from "../../components/video-frame";
 
 const Movie = () => {
   const router = useRouter()
@@ -19,6 +20,14 @@ const Movie = () => {
         console.log(error.message);
         setLoading(false);
     })
+  }
+
+  var videoSettings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   }
 
   var settings = {
@@ -96,7 +105,6 @@ const Movie = () => {
           </div>
           <div className="row">
             <div className="col-12 col-xl-8">
-
               <div className="categories">
                 <h3 className="categories__title">Genres</h3>
 
@@ -115,14 +123,15 @@ const Movie = () => {
           <div className="col-12 mt-3">
             <h3 className="categories__title">Trailers</h3>
           </div>
-          <div className="mt-3">
-          
-          {moviesDetail.videos.results.map((result, index)=>{
-                    return(<>
-                        <div>{result.name}</div>
-                      </>
-                    )
-                })}
+          <div className="mt-3 col-12">
+          <Slider {...videoSettings}>
+            {moviesDetail.videos.results.map((result, index)=>{
+                return(<>
+                    <VideoFrame data={result} index={index}/>
+                  </>
+                )
+            })}
+          </Slider>
           </div>
         </div>
 

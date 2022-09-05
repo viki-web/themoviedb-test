@@ -5566,3 +5566,19 @@ body::-webkit-scrollbar-thumb {
 .slick-prev:hover{
   background: #0b5bc7bf;
 }
+
+.video-frame{
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  position: relative;
+  padding-bottom: 56.25%
+}
+
+.video-frame iframe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}

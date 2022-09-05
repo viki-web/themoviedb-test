@@ -1,5 +1,7 @@
 function Help() {
-    return <div>This is help page</div>
+    return <div className="container">
+      
+    </div>
   }
   
 export default Help
