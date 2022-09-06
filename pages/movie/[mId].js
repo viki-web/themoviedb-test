@@ -5,12 +5,18 @@ import Item from "../../components/item/item";
 import Slider from "react-slick";
 import VideoFrame from "../../components/video-frame";
 import moment from "moment/moment";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const Movie = () => {
   const router = useRouter()
   const {mId} = router.query;
   const [loading, setLoading] = useState(true);
   const [moviesDetail, setMoviesDetail] = useState([]);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
 
   const fetchMovieDetail = () => {
     MovieDBService.getMoviesDetail(mId).then(payload =>{
@@ -91,7 +97,7 @@ const Movie = () => {
           <div className="row">
             <div className="col-xl-3">
               <div className="card__cover">
-                <a href={"/server/"+moviesDetail.id} >
+                <a onClick={handleShow}>
                   <i className="fa-solid fa-play xl-icon"></i>
                   <img className="rounded" src={"//image.tmdb.org/t/p/w300"+moviesDetail.poster_path}/>
                 </a>
@@ -176,6 +182,21 @@ const Movie = () => {
       </div>
       
       </section>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
 
     </>)}
