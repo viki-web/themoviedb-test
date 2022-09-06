@@ -61,6 +61,16 @@ const Movie = () => {
       ]
 };
 
+  const timeConvert = (n) => {
+    var num = n;
+    var hours = (num / 60);
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    return rhours + "h " + rminutes + "min";
+  }
+  
+
   useEffect(()=>{
     if(mId){
       fetchMovieDetail();
@@ -85,17 +95,13 @@ const Movie = () => {
               </div>
             </div>
             <div className="col-12 col-xl-9">
-            <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" className="article__trailer open-video">
-							Trailer
-						</a>
             <div className="article__content">
 							<h1>{moviesDetail.original_title}</h1>
 
 							<ul className="list">
-								<li><i className="fa-solid fa-star mr-1"></i> 9.7</li>
-								<li>Action</li>
+								<li><i className="fa-solid fa-star mr-1"></i> {moviesDetail.vote_average}</li>
 								<li>2021</li>
-								<li>1 h 42 min</li>
+								<li>{timeConvert(moviesDetail.runtime)}</li>
 								<li>16+</li>
 							</ul>
 
