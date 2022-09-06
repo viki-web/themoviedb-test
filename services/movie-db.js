@@ -24,9 +24,19 @@ const getMoviesDetail = (movie_id)=> {
     })
 }
 
+const getCastDetail = (cast_id) => {
+    let url = `${domain}/3/person/${cast_id}?api_key=d0e6107be30f2a3cb0a34ad2a90ceb6f&append_to_response=combined_credits,images,external_ids`
+    return fetcher(url,{
+        method: 'GET',
+    }, true).then(data=>{
+        return Promise.resolve(data);
+    })
+}
+
 const MovieDBService = {
     getMovies,
-    getMoviesDetail
+    getMoviesDetail,
+    getCastDetail
 }
 
 export default MovieDBService

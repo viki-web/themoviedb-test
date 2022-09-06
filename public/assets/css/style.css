@@ -58,6 +58,7 @@ html {
 html,
 body {
   height: 100%;
+  color: #fff;
 }
 body {
   font-family: 'Inter', sans-serif;
@@ -5581,4 +5582,8 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   border: none;
   border-radius: 20px;
+}
+
+.pre-wrap{
+  white-space: pre-wrap;
 }

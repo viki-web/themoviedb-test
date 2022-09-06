@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import moment from "moment/moment";
 
 const Item = ({data, index, type}) => {
     var poster_path = (data.poster_path)?("//image.tmdb.org/t/p/w300"+data.poster_path):('https://i.ibb.co/Q9Y7ck1/placeholder.png');
@@ -25,7 +26,7 @@ const Item = ({data, index, type}) => {
                             <ul className="card__list">
                                 <li>Free</li>
                                 <li>Action</li>
-                                <li>2019</li>
+                                <li>{moment(data.release_date).format("YYYY")}</li>
                             </ul>
                         </>)
                     } else if (type==2) {
