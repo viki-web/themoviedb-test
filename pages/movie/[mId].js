@@ -80,7 +80,9 @@ const Movie = () => {
 
   return(<>
    {loading?(
-        <div>loading</div>
+      <div className="container">
+          <div>loading</div>
+      </div>
     ):(<>
       <section className="section section--head section--head-fixed section--gradient section--details-bg">
       <div className="section__bg" style={{backgroundImage: 'url(//image.tmdb.org/t/p/w1280' + moviesDetail.backdrop_path + ')'}}></div>

@@ -30,8 +30,10 @@ const Cast = () => {
       },[castId]);
 
     return(<>
-       {loading?(
-        <div>loading</div>
+    {loading?(
+        <div className="container">
+            <div>loading</div>
+        </div>
     ):(<>
       <section className="section section--head section--head-fixed section--gradient section--details-bg">
       <div className="section__bg" style={{backgroundImage: 'url(//image.tmdb.org/t/p/w1280' + castDetail.backdrop_path + ')'}}></div>
