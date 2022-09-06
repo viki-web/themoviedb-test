@@ -31,12 +31,12 @@ const Item = ({data, index, type}) => {
                     } else if (type==2) {
                         return (<>
                             <div className="card__cover">
-                                <a href={"/movie/"+data.id}>
+                                <a href={"/cast/"+data.id}>
                                     <img src={profile_path}/>
                                 </a>
                             </div>
                             <h5 className='card__title'>
-                            <Link href={"/movie/"+data.id}>
+                            <Link href={"/cast/"+data.id}>
                                 <a>{data.name}</a>
                             </Link>
                             </h5>

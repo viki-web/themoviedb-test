@@ -4,6 +4,7 @@ import MovieDBService from "../../services/movie-db";
 import Item from "../../components/item/item";
 import Slider from "react-slick";
 import VideoFrame from "../../components/video-frame";
+import moment from "moment/moment";
 
 const Movie = () => {
   const router = useRouter()
@@ -100,7 +101,7 @@ const Movie = () => {
 
 							<ul className="list">
 								<li><i className="fa-solid fa-star mr-1"></i> {moviesDetail.vote_average}</li>
-								<li>2021</li>
+								<li>{moment(moviesDetail.release_date).format("MMM Do YYYY")} </li>
 								<li>{timeConvert(moviesDetail.runtime)}</li>
 								<li>16+</li>
 							</ul>
