@@ -13,7 +13,7 @@ const Item = ({data, index, type}) => {
                         return (<>
                             <div className="">
                                 <a href={"/movie/"+data.id} className="card__cover">
-                                    <span className="card__rating"><i className="fa-solid fa-star mr-1"></i> 7.2</span>
+                                    <span className="card__rating"><i className="fa-solid fa-star mr-1"></i> {data.vote_average}</span>
                                     <i className="fa-solid fa-play icon"></i>
                                     <img src={poster_path}/>
                                 </a>
@@ -24,8 +24,7 @@ const Item = ({data, index, type}) => {
                             </Link>
                             </h5>
                             <ul className="card__list">
-                                <li>Free</li>
-                                <li>Action</li>
+                                <li>Movie</li>
                                 <li>{moment(data.release_date).format("YYYY")}</li>
                             </ul>
                         </>)

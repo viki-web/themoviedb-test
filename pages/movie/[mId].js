@@ -105,7 +105,6 @@ const Movie = () => {
 								<li><i className="fa-solid fa-star mr-1"></i> {moviesDetail.vote_average}</li>
 								<li>{moment(moviesDetail.release_date).format("MMM Do YYYY")}</li>
 								<li>{timeConvert(moviesDetail.runtime)}</li>
-								<li>16+</li>
 							</ul>
 
 							<p>{moviesDetail.overview}</p>
