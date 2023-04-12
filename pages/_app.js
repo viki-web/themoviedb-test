@@ -23,16 +23,14 @@ class Application extends App {
                         name="viewport"
                         content="width=device-width, initial-scale=1, shrink-to-fit=no"
                     />
-
                     <meta charSet="utf-8"/>
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                     <title>MovieDB</title>
-
                 </Head>
+
                 <Layout {...pageProps}>
                     <Component {...pageProps}/>
                 </Layout>
-
             </React.Fragment>
         )
     }

@@ -36,9 +36,9 @@ const closeNav = () => {
 							<li className="header__nav-item">
                 				<a className="header__nav-link" onClick={()=>{Router.push("/movies/popular")}}>Movies</a>
 							</li>
-							<li className="header__nav-item">
+							{/* <li className="header__nav-item">
 							  <a className="header__nav-link" onClick={()=>{Router.push("/shows/popular")}}>Shows</a>
-							</li>
+							</li> */}
 							<li className="header__nav-item">
 								<a className="header__nav-link" onClick={()=>{Router.push("/help")}}>Help</a>
 							</li>

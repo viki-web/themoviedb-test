@@ -1824,12 +1824,20 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  position: relative;
+  padding-top: 150%;
 }
 
-.card__cover  a{display: flex;
-    align-items: center;
-    justify-content: center;
+.card__cover a{
+  background-image: url(../images/placeholder.png);
+  top: 0;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
+
 .card__cover img {
   width: 100%;
   position: relative;
@@ -5486,4 +5494,9 @@ body::-webkit-scrollbar-thumb {
 
 .pre-wrap{
   white-space: pre-wrap;
+}
+
+.modal-content{
+  border-radius: 0;
+  background-color: #131720;
 }

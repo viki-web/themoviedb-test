@@ -11,8 +11,8 @@ const Item = ({data, index, type}) => {
                 (() => {
                     if(type==1) {
                         return (<>
-                            <div className="">
-                                <a href={"/movie/"+data.id} className="card__cover">
+                            <div className="card__cover">
+                                <a href={"/movie/"+data.id}>
                                     <span className="card__rating"><i className="fa-solid fa-star mr-1"></i> {data.vote_average}</span>
                                     <i className="fa-solid fa-play icon"></i>
                                     <img src={poster_path}/>
