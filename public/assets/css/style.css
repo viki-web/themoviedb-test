@@ -1830,12 +1830,14 @@ body::-webkit-scrollbar-thumb {
 
 .card__cover a{
   background-image: url(../images/placeholder.png);
+  background-size: cover;
   top: 0;
   width: 100%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
   }
 
 .card__cover img {
@@ -5439,12 +5441,13 @@ body::-webkit-scrollbar-thumb {
 
 .slick-prev,
 .slick-next {
-  background: #ffffff2b;
+  background: #ffffffab;
   width: 40px;
   height: 40px;
   text-align: center;
   line-height: 50px;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .slick-prev:before{
@@ -5458,11 +5461,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .slick-prev {
-  left: -35px;
+  left: -0px;
 }
 
 .slick-next {
-  right: -35px;
+  right: -0px;
 }
 
 .col-five{

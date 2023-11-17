@@ -26,7 +26,7 @@ const MoviesListing = ({genere, page}) => {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 8,
         slidesToScroll: 1,
         responsive: [
             {

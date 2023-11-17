@@ -28,7 +28,7 @@ const MoviesListingInfinite = ({genere}) => {
     },[]);
 
     return(<>
-    <div className="clearfix container">
+    <div className="clearfix container-fluid">
         {loading?(
             <div>loading</div>
         ):(<>
