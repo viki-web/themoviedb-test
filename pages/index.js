@@ -1,52 +1,107 @@
-import React, {useEffect, useState} from "react";
-import MoviesListing from "../components/movies";
+import Head from 'next/head'
+import CardTrending from '../components/CardTrending'
+import Collection from '../components/Collection'
+import SearchBar from '../components/SearchBar'
+import { pathToSearchAll } from '../utils'
 
-function HomePage() {
-    const [page, setPage] = useState(1);
+export default function Home() {
+  const limitNormal = 6
+  const limitTrending = 10
 
-    return (<>
-      <div className="section">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12">
-              <h2 className="section__title">Now Playing</h2>
-            </div>
-          </div>
-          <MoviesListing page={page}/>
-          <div className="row">
-            <div className="col-12">
-              <h2 className="section__title">Top Thriller</h2>
-            </div>
-          </div>
-          <MoviesListing genere={878}/>
-          <div className="row">
-            <div className="col-12">
-              <h2 className="section__title">Top Sci-Fi</h2>
-            </div>
-          </div>
-          <MoviesListing genere={99} page={page}/>
-          <div className="row">
-            <div className="col-12">
-              <h2 className="section__title">Top Kids</h2>
-            </div>
-          </div>
-          <MoviesListing genere={16} page={page}/>
-          <div className="row">
-            <div className="col-12">
-              <h2 className="section__title">Top Horror</h2>
-            </div>
-          </div>
-          <MoviesListing genere={53} page={page}/>
-          <div className="row">
-            <div className="col-12">
-              <h2 className="section__title">Now playing</h2>
-            </div>
-          </div>
-          <MoviesListing genere={27} page={page}/>
-        </div>
-      </div>
+  return (
+    <>
+      <Head>
+        <title>Home | Watcho</title>
+      </Head>
+      <SearchBar searchPath={pathToSearchAll} />
 
-    </>)
-  }
-  
-export default HomePage
+      {/* Collection of different groups of movies */}
+      <Collection
+        isHomePage
+        isTrending
+        Component={CardTrending}
+        endpoint='/api/movie/trending/1'
+        href='/movie/trending/1'
+        limit={limitTrending}
+        title='Trending'
+      />
+      <Collection
+        isHomePage
+        endpoint='/api/movie/popular/1'
+        href='/movie/popular/1'
+        limit={limitNormal}
+        title='Popular'
+      />
+      <Collection
+        isHomePage
+        endpoint='/api/movie/now/1'
+        href='/movie/now/1'
+        limit={limitNormal}
+        title='Now playing'
+      />
+      <Collection
+        isHomePage
+        endpoint='/api/movie/upcoming/1'
+        href='/movie/upcoming/1'
+        limit={limitNormal}
+        title='Upcoming'
+      />
+      <Collection
+        isHomePage
+        endpoint='/api/movie/top/1'
+        href='/movie/top/1'
+        limit={limitNormal}
+        title='Top rated'
+      />
+
+      {/* Collection of different groups of tv series */}
+      <Collection
+        isHomePage
+        isTrending
+        Component={CardTrending}
+        endpoint='/api/tv/trending/1'
+        href='/tv/trending/1'
+        limit={limitTrending}
+        media_type='tv'
+        title='Trending'
+        type='tv series'
+      />
+      <Collection
+        isHomePage
+        endpoint='/api/tv/popular/1'
+        href='/tv/popular/1'
+        limit={limitNormal}
+        media_type='tv'
+        title='Popular'
+        type='tv series'
+      />
+      <Collection
+        isHomePage
+        endpoint='/api/tv/airing/1'
+        href='/tv/airing/1'
+        limit={limitNormal}
+        media_type='tv'
+        title='Airing today'
+        type='tv series'
+      />
+      <Collection
+        isHomePage
+        endpoint='/api/tv/onair/1'
+        href='/tv/onair/1'
+        limit={limitNormal}
+        media_type='tv'
+        title='On air'
+        type='tv series'
+      />
+      <Collection
+        isHomePage
+        endpoint='/api/tv/top/1'
+        href='/tv/top/1'
+        limit={limitNormal}
+        media_type='tv'
+        title='Top rated'
+        type='tv series'
+      />
+    </>
+  )
+}
