@@ -1,89 +1,35 @@
+# movx
 
-# <img src = "https://media4.giphy.com/media/AuZXGzk5qKRpG54Ewl/giphy.gif?cid=ecf05e47jgpe7u14fp4yhajmqlmiy1jlf4xw5npgof5lr2qo&rid=giphy.gif&ct=s" width="45"> Watcho
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f3dd54aa-fd47-4ed5-bdaa-e6248062c6ad/deploy-status)](https://app.netlify.com/sites/watcho-app/deploys)
+Simple react app that lets you browse for your favorite movies, tv shows, and actors.
+Built with react js | TMDB api
 
->Welcome to the 🎬 ``` Watcho ``` app! Watcho allows user to browse and search for their favorite movies or being based on any particular genre like horror, action, mystry, crime, family, fantasy, romance, music, and much More. Explore our app and you would fall in love 😍 for sure.
+<img width="1335" alt="Screenshot 2023-10-02 at 11 23 09 AM" src="https://github.com/ParthAhuja143/movx/assets/43706009/6615f335-e6fd-4d08-8af9-7747920b14ae">
 
-Author : [Sayan Maity](sayancr777@gmail.com)
+### Install Dependencies
 
-<p align="center">
-  <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/banner.png" alt="banner">
-</p>
+```sh
+$ npm install
+```
 
-## 🛠️ Built with :
-<img src="https://img.shields.io/badge/react%20-%23333.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>  <img src="https://img.shields.io/badge/next.js%20-%23323330.svg?&style=for-the-badge&logo=next.js&logoColor=white"/>  <img src="https://img.shields.io/badge/tailwindcss%20-%2306B6D4.svg?&style=for-the-badge&logo=tailwindcss&logoColor=white"/> <img src="https://img.shields.io/badge/themoviedatabase%20-%2301B4E4.svg?&style=for-the-badge&logo=themoviedatabase&logoColor=white"/> <img src="https://img.shields.io/badge/netlify%20-%2300C7B7.svg?&style=for-the-badge&logo=netlify&logoColor=white"/> <img src="https://img.shields.io/badge/vercel%20-%23333.svg?&style=for-the-badge&logo=vercel&logoColor=white"/> <img src="https://img.shields.io/badge/cloudflare%20-%23F38020.svg?&style=for-the-badge&logo=cloudflare&logoColor=white"/> 
-- **Frontend**: ReactJS, NextJS, TailwindCSS
-- **API**: TMDB API
-- **Version Control**: Git
-- **Hosting**: Netlify, Github Pages, Vercel, CloudFlare
+### Get API key
 
-## ✨ Features :
-- Browse movies by genre
-- Search for specific movies
-- View movie details, including plot summary, cast, and ratings
+Login to TheMovieDB to get your api key. Login [here](https://www.themoviedb.org/settings/api)
 
-## 📸 Screenshots
-<table>
-    <tr>
-        <td colspan="2">
-            <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/preview.jpg"></img>
-            <br />
-            <h3 align="center">Home Page</h3>
-        </td>
-    </tr>
-    <tr>
-        <td width="50%">
-            <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/preview7.jpg"></img>
-            <br />
-            <p align="center">Trending & Popular Section</p>
-        </td>
-        <td width="50%">
-            <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/preview6.jpg"></img>
-            <br />
-            <p align="center">Now Playing and Upcoming Section</p>
-        </td>
-    </tr>
-    <tr>
-        <td width="50%">
-            <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/preview2.jpg"></img>
-            <br />
-            <p align="center">Movies Genre</p>
-        </td>
-        <td width="50%">
-            <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/preview3.jpg"></img>
-            <br />
-            <p align="center">TV Series Genre</p>
-        </td>
-    </tr>
-    <tr>
-        <td width="50%">
-            <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/preview4.jpg"></img>
-            <br />
-            <p align="center">Search Results</p></td>
-        <td width="50%">
-            <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/preview8.jpg"></img>
-            <br />
-            <p align="center">Music Search Genre</p></td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <img src="https://github.com/Sayan-Maity/Watcho/blob/main/assets/preview5.jpeg"></img>
-            <br />
-            <h3 align="center">Movie Detail</h3>
-        </td>
-    </tr>
-</table>
+Create a .env file in the root of your project folder and name it _.env.development_
+and add the following
 
+```
+TMDB_KEY=[yourapikey]
+```
 
-## ⏳ Future Improvements :
+### Run development server
 
-- [ ] Add a bookmark page to store the user's favorite movies and tv shows
-- [ ] Add the video playing feature when the user hover over the card and play the video
-- [ ] Add authentication so that the user can sign up and log in to save their favorite movies and tv shows permanently
+```sh
+$ npm run dev-server
+```
 
+### Build the project
 
-## 📝 Endnote
-So if you have liked this project then do consider giving it a star which will encourage me to build more of this kind of projects in future and also if you want youcan follow me on [Github](https://github.com/Sayan-Maity/) 😊
-Keep Coding !
-
-<p align="right">~ Sayan Maity</p>
+```sh
+$ npm run build
+```
