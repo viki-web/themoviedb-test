@@ -30,7 +30,7 @@ const Home: React.FC<RouteComponentProps> = ({ history }) => {
     <>
       <MovieSlider movies={popularMovies?.results || []} />
       <div className="container__wrapper">
-        {upcomingMovies && (
+        {/* {upcomingMovies && (
           <>
             <div className="movie__header">
               <div className="movie__header-title header__title">
@@ -46,7 +46,7 @@ const Home: React.FC<RouteComponentProps> = ({ history }) => {
               View All Upcoming Movies
             </button>
           </>
-        )}
+        )} */}
         {topRatedMovies && (
           <>
             <div className="movie__header">
