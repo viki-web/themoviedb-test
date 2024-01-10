@@ -1,0 +1,17 @@
+@import url(vendor/animate.min.css);
+@import url(vendor/aos.css);
+/* @import url(vendor/bootstrap.min.css); */
+@import url(vendor/default.css);
+@import url(vendor/flaticon.css);
+@import url(vendor/fontawesome-all.min.css);
+@import url(vendor/magnific-popup.css);
+@import url(vendor/odometer.css);
+/* @import url(vendor/owl.carousel.min.css); */
+@import url(vendor/responsive.css);
+@import url(vendor/slick.css);
+@import url(vendor/style.css);
+
+/* the parent */
+.slick-list .slick-slide .movie-item{
+    padding: 0 10px;
+}
